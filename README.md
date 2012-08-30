@@ -1,7 +1,7 @@
 DESCRIPTION
 ===========
 
-Installs the VP8 codec SDK - [WebM Project](http://www.webmproject.org/code/)
+Installs the libfdk-aac ("Fraunhofer FDK AAC code from Android") - [GitHub](https://github.com/mstorsjo/fdk-aac)
 
 Requirements
 ============
@@ -14,24 +14,27 @@ Please help increase the supported platform list by notifying me or submitting p
 Attributes
 ==========
 
-* `libvpx[:install_method]` - Installation method, `:source` or `:package` - default `:source`
-* `libvpx[:git_repository]` - Location of the source Git repository if installing via `:source`
-* `libvpx[:git_revision]` - Revision of the Git repository to install if installing via `:source`.
-* `libvpx[:prefix]` - Location prefix of where the installation files will go if installing via `:source`
+* `libfdk-aac[:install_method]` - Installation method, `:source` or `:package` - default `:source`
+* `libfdk-aac[:git_repository]` - Location of the source Git repository if installing via `:source`
+* `libfdk-aac[:git_revision]` - Revision of the Git repository to install if installing via `:source`.
+* `libfdk-aac[:prefix]` - Location prefix of where the installation files will go if installing via `:source`
 
 WARN: When specifying the `git_revision` attribute, use the hash of commit or a HEAD - not a tag. Sync action of Git provider will always attempt to update the git clone if a tag is used.
 
 Development
 ===========
 
-* Source hosted at [GitHub](https://github.com/enmasse-entertainment/libvpx-cookbook)
-* Report issues/Questions/Feature requests on [GitHub Issues](https://github.com/enmasse-entertainment/libvpx-cookbook/issues)
+* Source hosted at [GitHub](https://github.com/anentropic/libfdk-aac-cookbook)
+* Report issues/Questions/Feature requests on [GitHub Issues](https://github.com/anentropic/libfdk-aac-cookbook/issues)
 
 Pull requests are very welcome! Make sure your patches are well tested.
 Ideally create a topic branch for every separate change you make.
 
 LICENSE and AUTHOR
 ==================
+
+Based on [libvpx-cookbook](https://github.com/enmasse-entertainment/libvpx-cookbook) by:
+----------------------------
 
 Author:: Jamie Winsor (<jamie@vialstudios.com>)
 

@@ -25,14 +25,34 @@ libfdk_aac_packages.each do |pkg|
   end
 end
 
+
+# install prerequisites:
+
 yasm_package = value_for_platform(
   [ "ubuntu" ] => { "default" => "yasm" },
   "default" => "yasm"
+)
+libtool = value_for_platform(
+  [ "ubuntu" ] => { "default" => "libtool" },
+  "default" => "libtool"
+)
+autoconf = value_for_platform(
+  [ "ubuntu" ] => { "default" => "autoconf" },
+  "default" => "autoconf"
 )
 
 package yasm_package do
   action :upgrade
 end
+
+package libtool do
+  action :install
+end
+
+package autoconf do
+  action :install
+end
+
 
 git "#{Chef::Config[:file_cache_path]}/libfdk_aac" do
   repository node[:libfdk_aac][:git_repository]
@@ -43,6 +63,7 @@ end
 
 bash "compile_libfdk_aac" do
   cwd "#{Chef::Config[:file_cache_path]}/libfdk_aac"
+  user "root"
   code <<-EOH
     autoreconf -fiv
     ./configure --prefix=#{node[:libfdk_aac][:prefix]}

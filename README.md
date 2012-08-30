@@ -33,8 +33,7 @@ Ideally create a topic branch for every separate change you make.
 LICENSE and AUTHOR
 ==================
 
-Based on [libvpx-cookbook](https://github.com/enmasse-entertainment/libvpx-cookbook) by:
-----------------------------
+### Based on [libvpx-cookbook](https://github.com/enmasse-entertainment/libvpx-cookbook) by:
 
 Author:: Jamie Winsor (<jamie@vialstudios.com>)
 

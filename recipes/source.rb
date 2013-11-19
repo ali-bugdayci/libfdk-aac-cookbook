@@ -66,8 +66,8 @@ bash "compile_libfdk_aac" do
   user "root"
   code <<-EOH
     autoreconf -fiv
-    ./configure --prefix=#{node[:libfdk_aac][:prefix]}
+    ./configure --prefix=#{node[:libfdk_aac][:prefix]} #{node[:libfdk_aac][:compile_flags].join(' ')}
     make clean && make && make install
   EOH
-  creates "#{node[:libfdk_aac][:prefix]}/bin/fdk-aac"# ???
+  creates "#{node[:libfdk_aac][:prefix]}/lib/libfdk-aac.a"
 end

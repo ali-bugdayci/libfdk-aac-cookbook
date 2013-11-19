@@ -3,6 +3,7 @@ DESCRIPTION
 
 Installs the libfdk-aac ("Fraunhofer FDK AAC code from Android") - [GitHub](https://github.com/mstorsjo/fdk-aac)
 
+Difference: Added the compile flags.
 Requirements
 ============
 
